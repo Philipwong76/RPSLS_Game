@@ -53,3 +53,25 @@ class gameplay:
                 if player2.points == 3:
                     winnerFound = True
                     print("Player 2 wins")
+
+    def checkGestures(self, gesture1, gesture2):
+        if gesture1 == gesture2:
+            return 0
+        if gesture1 == "rock":
+            if gesture2 == "scissors" or "lizard":
+                return 1
+        elif gesture1 == "paper":
+            if gesture2 == "rock" or "spock":
+                return 1
+        elif gesture1 == "scissors":
+            if gesture2 == "paper" or "lizard":
+                return 1
+        elif gesture1 == "lizard":
+            if gesture2 == "paper" or "spock":
+                return 1
+        elif gesture1 == "spock":
+            if gesture2 == "rock" or "scissors":
+                return 1
+        else:
+            return 2
+        
