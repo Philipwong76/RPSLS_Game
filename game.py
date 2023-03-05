@@ -16,7 +16,7 @@ class gameplay:
                 player1.gesture = playerGesture
                 AIPlayer.chooseGesture()
 
-                result = (player1.gesture, AIPlayer.gesture)
+                result = self.checkGestures(player1.gesture, AIPlayer.gesture)
                 if result == 1:
                     player1.points += 1
                 elif result == 2:
@@ -40,7 +40,7 @@ class gameplay:
                 playerGesture = player2.chooseGesture()
                 player2.gesture = playerGesture
 
-                result = (player1.gesture, player2.gesture)
+                result = self.checkGestures(player1.gesture, player2.gesture)
                 if result == 1:
                     player1.points += 1
                 elif result == 2:
